@@ -1,6 +1,12 @@
 require "test_helper"
 
 class PagesControllerTest < ActionController::TestCase
+
+  def test_home
+    get :home
+    assert_response :success
+  end
+
   def test_examples
     get :examples
     assert_response :success
