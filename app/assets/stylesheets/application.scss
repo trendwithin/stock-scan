@@ -14,3 +14,24 @@
  *= require_self
  */
 @import 'bootstrap';
+.navbar-header .navbar-brand {
+  color: #D80606;
+}
+.navbar-brand {
+  font-family: Ariel, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 18px;
+  word-spacing: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-famil: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight :bold;
+  color: #019285;
+}
+
+.jumbotron {
+  background-image: url("stock_image.png");
+}
