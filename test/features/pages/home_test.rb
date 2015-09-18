@@ -8,4 +8,25 @@ feature "Pages::Home Minimal Verbiage Expectation" do
     page.must_have_content "Examples"
     page.must_have_content "Contact"
   end
+
+  scenario 'Home Page has Tally of All Time High Stocks' do
+    visit root_path
+    page.must_have_content "All-Time-Highs"
+    page.must_have_content "2"
+  end
+
+  scenario 'Home Page has Tally of All Time Low' do
+    visit root_path
+    page.must_have_content 'All-Time-Lows'
+  end
+
+  scenario 'Home Page has Tally of New Highs' do
+    visit root_path
+    page.must_have_content 'New Highs'
+  end
+
+  scenario 'Home Page has Tally of New Lows' do
+    visit root_path
+    page.must_have_content 'New Lows'
+  end
 end

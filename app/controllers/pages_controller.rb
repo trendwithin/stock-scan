@@ -9,5 +9,6 @@ class PagesController < ApplicationController
   end
 
   def home
+    @daily_ath_tally =  AllTimeHigh.daily_ath.daily_ath_count
   end
 end
