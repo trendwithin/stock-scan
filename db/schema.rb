@@ -11,9 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150917164400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "all_time_highs", force: :cascade do |t|
+    t.string   "symbol"
+    t.datetime "saved_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "all_time_lows", force: :cascade do |t|
+    t.string   "symbol"
+    t.datetime "saved_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "high_lows", force: :cascade do |t|
+    t.integer  "one_month_high"
+    t.integer  "one_month_low"
+    t.integer  "three_month_high"
+    t.integer  "three_month_low"
+    t.integer  "six_month_high"
+    t.integer  "six_month_low"
+    t.integer  "twelve_month_high"
+    t.integer  "twelve_month_low"
+    t.integer  "ytd_high"
+    t.integer  "ytd_low"
+    t.datetime "saved_on"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "new_highs", force: :cascade do |t|
+    t.string   "symbol"
+    t.datetime "saved_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "new_lows", force: :cascade do |t|
+    t.string   "symbol"
+    t.datetime "saved_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

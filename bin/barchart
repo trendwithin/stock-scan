@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "barchart_data"
+require_relative '../lib/barchart_data/scraper'
+require_relative '../lib/barchart_data/high_low_scraper'
+
+scraper = BarchartData::Scraper.new
+scraper.data_extraction
+
+
+hl_scraper = BarchartData::HighLowScraper.new
+links = hl_scraper.data_extraction
+values = hl_scraper.strip_highs_and_lows_from links
+hl_scraper.insert_data values
