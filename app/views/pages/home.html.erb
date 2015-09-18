@@ -18,4 +18,9 @@
   </div>
 </div>
 
-
+<div class="row">
+  <div class="container">
+    <h4 class="center">All Time Highs</h4>
+    <%= line_chart AllTimeHigh.group_by_day(:saved_on).count %>
+  </div>
+</div>

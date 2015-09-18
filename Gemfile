@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'passenger', '~> 5.0.7'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'barchart_data', '~> 0.1.1'
+gem 'chartkick', '~> 1.4.1'
+gem 'groupdate', '~> 2.4.0'
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
