@@ -9,10 +9,23 @@ feature "Pages::Home Minimal Verbiage Expectation" do
     page.must_have_content "Contact"
   end
 
+  scenario 'Visti Home Page, Click on About' do
+    visit root_path
+    click_link 'About'
+    page.must_have_content 'Market Breadth'
+    page.must_have_content 'Vehicle Selection'
+  end
+
+  scenario 'Visit Home Page, Click on Contact' do
+    visit root_path
+    click_link 'Contact'
+    page.must_have_content 'email'
+    page.must_have_content 'github'
+  end
+
   scenario 'Home Page has Tally of All Time High Stocks' do
     visit root_path
     page.must_have_content "All-Time-Highs"
-    save_and_open_page
     # page.must_have_content "2"
   end
 
