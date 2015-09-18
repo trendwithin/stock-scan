@@ -1,0 +1,11 @@
+one:
+  symbol: ATH
+  saved_on: <%= Time.now %>
+
+two:
+  symbol: ATH
+  saved_on: <%= Time.now - 1.days %>
+
+three:
+  symbol: AAPL
+  saved_on: <%= Time.now %>

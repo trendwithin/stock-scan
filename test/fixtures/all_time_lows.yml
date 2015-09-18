@@ -1,0 +1,11 @@
+one:
+  symbol: GOLD
+  saved_on: <%= Time.now %>
+
+two:
+  symbol: GOLD
+  saved_on: <%= Time.now - 1.days %>
+
+three:
+  symbol: ZORK
+  saved_on: <%= Time.now %>
