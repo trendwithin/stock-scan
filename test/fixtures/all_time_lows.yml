@@ -9,3 +9,11 @@ two:
 three:
   symbol: ZORK
   saved_on: <%= Time.now %>
+
+four:
+  symbol: DOOM
+  saved_on: <%= Time.now %>
+
+four:
+  symbol: DOOM
+  saved_on: <%= Time.now - 1.days %>
