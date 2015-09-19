@@ -1,0 +1,12 @@
+one:
+  one_month_high: 150
+  one_month_low: 45
+  three_month_high: 300
+  three_month_low: 90
+  six_month_high: 600
+  six_month_low: 180
+  twelve_month_high: 1200
+  twelve_month_low: 360
+  ytd_high: 100
+  ytd_low: 50
+  saved_on: <%= Time.now %>
