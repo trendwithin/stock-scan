@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def examples
     @ath = AllTimeHigh.all
+    @highs = NewHigh.all
   end
 
   def about

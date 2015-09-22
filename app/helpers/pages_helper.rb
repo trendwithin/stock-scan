@@ -4,6 +4,6 @@ module PagesHelper
   end
 
   def chart_highs
-    NewHigh.pluck(:symbol).map { |e| { name: e, data: @highs.where(symbol: e).group_by_day(:saved_on, format: "%b %d, %Y").count } }
+    NewHigh.pluck(:symbol).map { |e| { name: e, data: @highs.where(symbol: e).group_by_day(:saved_on, format: "%B %d, %Y").count } }
   end
 end
