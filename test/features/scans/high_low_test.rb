@@ -32,6 +32,5 @@ feature "Scans::HighLow" do
     page.must_have_content "360"
     page.must_have_content "100"
     page.must_have_content "50"
-    save_and_open_page
   end
 end
