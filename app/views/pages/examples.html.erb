@@ -1,2 +1,52 @@
-<h1>Pages#examples</h1>
-<p>Find me in app/views/pages/examples.html.erb</p>
+<div class="row">
+  <div class="container">
+    <div class="panel">
+     <h4> Usage Examples: </h4>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-3 push">Google Spreadsheet Chart <br>
+      <p class="push-text">The pros of this is that it is simple to execute, the main con is that this slows down load time
+         as it now becomes dependent upon an outside resource.
+      </p>
+      <p>Resources:</p>
+      <ul class="push-text">
+        <li><%= link_to 'Create A Table of Data', scans_high_low_path, :target => "_blank" %></li>
+        <li>Create A Google Spreasheet</li>
+        <li><a href="http://www.labnol.org/internet/import-html-in-google-docs/28125/">ImportHTML Example</a></li>
+        <li><a href="https://support.google.com/docs/answer/78052?hl=en">Publish</a></li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <p>
+        <b>Google Spreadsheet:</b> One of the simplest manners of creating a chart is using
+        Google Drive Spreadsheet to pull data from a site, input this into a spreadsheet,
+        create a chart from this data in the spreadsheet, and then publish to the web.
+      </p>
+      <iframe width="600" height="371" seamless frameborder="1" scrolling="no" src="https://docs.google.com/spreadsheets/d/1aC7XZt5O_8GkFdqRSpFUkzhU95eC8FZTMOUegqkAnvQ/pubchart?oid=1189954796&amp;format=interactive">
+      </iframe>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <p>
+      <b>Chartkick:</b><br>
+      <a href="https://github.com/ankane/chartkick">Chartkick</a> is a gem that simplifies
+      the construction of charts.  <a href="https://richonrails.com/articles/charting-with-chartkick">Rich On Rails</a>
+      has a simple tutorial to get up to speed on how to integrate this gem.
+      </p>
+      <%= line_chart chart_highs, discrete: true %>
+      <%= line_chart @ath.group_by_day(:saved_on, format: "%B %d, %Y").count, discrete: true %>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

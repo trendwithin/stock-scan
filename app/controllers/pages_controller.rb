@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def examples
+    @ath = AllTimeHigh.all
   end
 
   def about
@@ -13,5 +14,8 @@ class PagesController < ApplicationController
     @daily_atl_tally = AllTimeLow.daily_atl.daily_atl_count
     @daily_nh_tally = NewHigh.daily_nh.daily_nh.count
     @daily_nl_tally = NewLow.daily_nl.daily_nl.count
+    @ath = AllTimeHigh.all
+    @highs = NewHigh.all
+    @lows = NewLow.all
   end
 end

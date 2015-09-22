@@ -17,7 +17,12 @@
     <div class="col-md-3">New Lows <%= @daily_nl_tally  %></div>
   </div>
 </div>
-
+<div class="row">
+  <div class="container">
+    <h4 class="center">52-Week Highs - 52 Week Lows</h4>
+    <%= line_chart highs_minus_lows, name: 'Highs - Lows', format: "%B %d, %Y", discrete: true %>
+  </div>
+</div>
 <div class="row">
   <div class="container">
     <h4 class="center">All Time Highs</h4>
